@@ -7,6 +7,10 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Image(systemName: "dollarsign.ring")
+                .padding(.top,-315)
+                .font(.largeTitle)
+                .foregroundColor(.green)
             Text("Savings App")
                 .padding(.top, -360)
                 .font(Font.largeTitle)
@@ -14,7 +18,7 @@ struct ContentView: View {
                 .foregroundColor(.green)
             
                 .foregroundColor(.accentColor)
-            Image(systemName: "dollarsign.ring")
+  
             
             
             
