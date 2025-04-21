@@ -4,7 +4,7 @@ struct ContentView: View {
     @State var number1 = ("")
     @State var number2 = ("")
     @State var number3 = ("")
-    
+    @State var number4 = ("")
     var body: some View {
         VStack {
             Image(systemName: "dollarsign.ring")
@@ -21,16 +21,20 @@ struct ContentView: View {
   
             
             
-            
+            HStack{
+
                 TextField("Savings",text: $number1)
-                
-                    .padding(.horizontal,170)
-                    .padding(.top, -145)
             
-                TextField("Enter your deduction",text: $number2)
-            TextField("Add Amount",text: $number3)
+            
+                TextField("Enter det",text: $number2)
+                
+            TextField("spending $",text: $number3)
+                
+                TextField("adding $",text: $number4)
         
             
+
+            }
         }
         
     }
