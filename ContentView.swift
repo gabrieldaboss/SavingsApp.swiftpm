@@ -1,12 +1,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var number1 = ("")
+    @State var number2 = ("")
+    @State var number3 = ("")
+    
     var body: some View {
         VStack {
-            Image(systemName: "dollarsign.arrow.trianglehead.counterclockwise.rotate.90")
-                .imageScale(.large)
+            Text("Savings App")
+                .padding(.top, -360)
+                .font(Font.largeTitle)
+                
+                .foregroundColor(.green)
+            
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
+            
+            
+                TextField("Savings",text: $number1)
+                
+                    .padding(.horizontal,170)
+                    .padding(.top, -145)
+            
+                TextField("Enter your deduction",text: $number2)
+            TextField("Add Amount",text: $number3)
+        
+            
         }
+        
     }
+       
 }
