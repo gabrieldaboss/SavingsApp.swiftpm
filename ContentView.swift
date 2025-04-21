@@ -14,6 +14,7 @@ struct ContentView: View {
                 .foregroundColor(.green)
             
                 .foregroundColor(.accentColor)
+            Image(systemName: "dollarsign.ring")
             
             
             
