@@ -6,7 +6,7 @@ struct ContentView: View {
             Image(systemName: "dollarsign.arrow.trianglehead.counterclockwise.rotate.90")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            
         }
     }
 }
