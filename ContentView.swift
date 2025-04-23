@@ -65,6 +65,8 @@ struct ContentView: View {
         } else {
             totalSavings = "Type numbers only!"
         }
+        
+        
     }
 }
 
