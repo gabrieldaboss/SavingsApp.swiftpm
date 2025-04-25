@@ -6,14 +6,7 @@ struct ContentView: View {
     @State var number4 = ""
     @State var totalSavings = ""
     @State var rotation = 0.0
-    @State var currentTotal: Double = 0.0
-    
-    let goalAmount: Double = 1000.0
-
-
-    
-    
-
+   
     var body: some View {
         VStack {
             Image(systemName: "dollarsign.ring")
@@ -32,12 +25,22 @@ struct ContentView: View {
                 .foregroundColor(.green)
                 .padding(.bottom, 30)
             
+            Circle()
+                            .stroke(Color.green,lineWidth: 5)
+                            .frame(width: 150,height: 150)
+                            .overlay(
+                                Text("\(totalSavings)")
+                                    .font(.title)
+                                    .foregroundColor(.green)
+                                    .padding(.top, 40)
+                            )
+
             TextField("How much money you have", text: $number1)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.decimalPad)
                 .padding(.horizontal)
 
-
+            
 
             
             
