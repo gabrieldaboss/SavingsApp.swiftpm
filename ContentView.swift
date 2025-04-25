@@ -9,6 +9,13 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
+            Circle()
+                .stroke(Color.green, lineWidth: 5)
+                .frame(width: 150,height: 150)
+                .overlay(
+                    Text("\(totalSavings)")
+                        .font(.title)
+                        .foregroundColor(.green))
             
             Image(systemName: "dollarsign.ring")
                 .font(.system(size: 80))
@@ -44,6 +51,8 @@ struct ContentView: View {
             .foregroundColor(.white)
             .cornerRadius(10)
             .padding(.top, 20)
+            
+          
 
             
             Text("Total Savings: \(totalSavings)")
