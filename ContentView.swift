@@ -7,6 +7,11 @@ struct ContentView: View {
     @State var totalSavings = ""
     @State var rotation = 0.0
    
+
+
+    
+    
+
     var body: some View {
         VStack {
             Image(systemName: "dollarsign.ring")
@@ -25,22 +30,27 @@ struct ContentView: View {
                 .foregroundColor(.green)
                 .padding(.bottom, 30)
             
-            Circle()
-                            .stroke(Color.green,lineWidth: 5)
-                            .frame(width: 150,height: 150)
-                            .overlay(
-                                Text("\(totalSavings)")
-                                    .font(.title)
-                                    .foregroundColor(.green)
-                                    .padding(.top, 40)
-                            )
-
+            ZStack{
+                Circle()
+                    .fill(Color.green.opacity(0.1))
+                    .frame(width: 150,height: 150)
+                    .shadow(radius: 5)
+                Circle()
+                    .stroke(Color.green,lineWidth: 5)
+                    .frame(width: 150,height: 150)
+                
+                Text(totalSavings)
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.green)
+            }
+            .padding(.vertical,20)
             TextField("How much money you have", text: $number1)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .keyboardType(.decimalPad)
                 .padding(.horizontal)
 
-            
+
 
             
             
