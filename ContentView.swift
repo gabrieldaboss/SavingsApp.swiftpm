@@ -10,11 +10,11 @@ struct ContentView: View {
     
     var body: some View {
         NavigationStack{
-            
-            NavigationLink("HowToSave",destination: HowToSave1())
-            
-          
-            
+            HStack{
+                NavigationLink("HowToSave",destination: HowToSave1())
+                NavigationLink("Monthly Savings",destination: MonthlySavings1())
+                NavigationLink("Ideas",destination: Ideas1())
+            }
             ZStack{
                 LinearGradient(
                     gradient: Gradient(colors: [.white,.green.opacity(0.2)]),
