@@ -12,9 +12,22 @@ struct ContentView: View {
         NavigationStack{
             HStack{
                 NavigationLink("HowToSave",destination: HowToSave1())
+                    .padding()
+                    .background(Color.customGreen)
+                    .foregroundColor(.primaryBackground)
+                    .cornerRadius(12)
                 NavigationLink("Monthly Savings",destination: MonthlySavings1())
+                    .padding()
+                    .background(Color.customGreen)
+                    .foregroundColor(.primaryBackground)
+                    .cornerRadius(12)
                 NavigationLink("Ideas",destination: Ideas1())
+                    .padding()
+                    .background(Color.customGreen)
+                    .foregroundColor(.primaryBackground)
+                    .cornerRadius(12)
             }
+            
             ZStack{
                 LinearGradient(
                     gradient: Gradient(colors: [.white,.green.opacity(0.2)]),
@@ -82,8 +95,8 @@ struct ContentView: View {
                         calculateTotal()
                     }
                     .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
+                    .background(Color.customGreen)
+                    .foregroundColor(.primaryBackground)
                     .cornerRadius(10)
                     .padding(.top, 20)
                     
