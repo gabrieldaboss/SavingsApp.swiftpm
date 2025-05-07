@@ -16,12 +16,16 @@ struct ContentView: View {
                     .background(Color.customGreen)
                     .foregroundColor(.primaryBackground)
                     .cornerRadius(12)
+                
+                    
                 NavigationLink("Monthly Savings",destination: MonthlySavings1())
+                
                     .padding()
                     .background(Color.customGreen)
                     .foregroundColor(.primaryBackground)
                     .cornerRadius(12)
                 NavigationLink("Ideas",destination: Ideas1())
+                
                     .padding()
                     .background(Color.customGreen)
                     .foregroundColor(.primaryBackground)
@@ -30,29 +34,23 @@ struct ContentView: View {
             
             ZStack{
                 LinearGradient(
-                    gradient: Gradient(colors: [.white,.green.opacity(0.2)]),
+                    gradient: Gradient(colors: [.white,.green.opacity(0.4)]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
                 .ignoresSafeArea()
                 
                 VStack {
-                    Image(systemName: "dollarsign.ring")
-                        .font(.system(size: 80))
-                        .foregroundColor(.green)
+                  
+                       
                     
-                        .padding(.top, 20)
-                    
-                    
-                        .padding(.top, 40)
+                        
                     
                     
                     
-                    Text("Savings App")
-                        .font(.largeTitle)
-                        .foregroundColor(.green)
-                        .padding(.bottom, 30)
-                    
+                    Text("SaveBetter")
+                        .frame(width: 200,height: 200)
+                        .titleStyle()
                     ZStack{
                         Circle()
                             .fill(Color.green.opacity(0.1))
