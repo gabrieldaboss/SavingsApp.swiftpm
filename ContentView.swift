@@ -6,7 +6,6 @@ struct ContentView: View {
     @State var number4 = ""
     @State var totalSavings = ""
     @State var rotation = 0.0
-        
     
     var body: some View {
         NavigationStack{
@@ -62,71 +61,45 @@ struct ContentView: View {
                         
                         Text(totalSavings)
                             .font(.title)
-                            .bold()
-                            .foregroundColor(.green)
+                            .padding(.top, 20)
+                        
+                        Spacer()
                     }
-                    .padding(.vertical,20)
-                    TextField("How much money you have", text: $number1)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .keyboardType(.decimalPad)
-                        .padding(.horizontal)
-                    
-                    
-                    
-                    
-                    
-                    
-                    TextField("How much you spent", text: $number3)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .keyboardType(.decimalPad)
-                        .padding(.horizontal)
-                    
-                    TextField("How much you added", text: $number4)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .keyboardType(.decimalPad)
-                        .padding(.horizontal)
-                    
-                    
-                    
-                    
-                    Button("Add it up!") {
-                        calculateTotal()
-                    }
-                    .padding()
-                    .background(Color.customGreen)
-                    .foregroundColor(.primaryBackground)
-                    .cornerRadius(10)
-                    .padding(.top, 20)
-                    
-                    
-                    
-                    
-                    
-                    Text("Total Savings: \(totalSavings)")
-                        .font(.title)
-                        .padding(.top, 20)
-                    
                 }
             }
         }
     }
-        
-        func calculateTotal() {
-            if let start = Double(number1),
-               let spend = Double(number3),
-               let add = Double(number4) {
-                
-                let total = start - spend + add
-                totalSavings = String(total)
-            } else {
-                totalSavings = "Type numbers only!"
-            }
-            
+    
+    func calculateTotal() {
+        if let start = Double(number1),
+           let spend = Double(number3),
+           let add = Double(number4) {
+            let total = start - spend + add
+            totalSavings = String(total)
+        } else {
+            totalSavings = "Type numbers only!"
         }
     }
+}
 
-
-
-
-
+struct OriginView: View {
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                Text("📖 The Origin Story")
+                    .font(.largeTitle)
+                    .foregroundColor(.green)
+                    .padding(.bottom, 10)
+                
+                Text("One sunny afternoon, while sipping on a caramel iced latte at a local café, a group of friends realized they had no idea where their money was going. One had saved $500, another had lost track of spending, and someone else kept adding cash to a jar. An idea sparked: what if there was a simple, beautiful app that could track savings, spending, and additions — all in one place?")
+                
+                Text("And just like that, the Savings App was born. A little tool to help you stay on top of your money, one dollar at a time 💵.")
+                
+                Spacer()
+            }
+            .padding()
+        }
+        .navigationTitle("Origin")
+    }
+}
 
