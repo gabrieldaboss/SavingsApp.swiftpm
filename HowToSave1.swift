@@ -13,7 +13,7 @@ struct HowToSave1: View {
                            Text("5. Prepare for grocery shopping in advance")
                            Text("6. Bring your lunch to work")
                            Text("7. Stop paying for cable television")
-                           
+                    
                            
                           
            
@@ -31,6 +31,8 @@ struct HowToSave1: View {
             
             
         }
+        .fontWeight(.bold)
+        .foregroundStyle(.green)
     }
 }
 

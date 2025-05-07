@@ -6,7 +6,6 @@ struct ContentView: View {
     @State var number4 = ""
     @State var totalSavings = ""
     @State var rotation = 0.0
-        
     
     var body: some View {
         NavigationStack{
