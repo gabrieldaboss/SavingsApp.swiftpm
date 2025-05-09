@@ -29,11 +29,7 @@ struct ContentView: View {
                         .foregroundColor(.primaryBackground)
                         .cornerRadius(12)
                     
-                    NavigationLink("Origin", destination: OriginView())
-                        .padding()
-                        .background(Color.customGreen)
-                        .foregroundColor(.primaryBackground)
-                        .cornerRadius(12)
+                 
                 }
                 .padding(.top)
                 
@@ -128,10 +124,7 @@ struct OriginView: View {
                     .font(.largeTitle)
                     .foregroundColor(.green)
                     .padding(.bottom, 10)
-                
-                Text("One sunny afternoon, while sipping on a caramel iced latte at a local café, a group of friends realized they had no idea where their money was going. One had saved $500, another had lost track of spending, and someone else kept adding cash to a jar. An idea sparked: what if there was a simple, beautiful app that could track savings, spending, and additions — all in one place?")
-                
-                Text("And just like that, the Savings App was born. A little tool to help you stay on top of your money, one dollar at a time 💵.")
+               
                 
                 Spacer()
             }
