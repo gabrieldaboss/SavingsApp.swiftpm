@@ -10,6 +10,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             ZStack{
+//Test
                 LinearGradient(
                     gradient: Gradient(colors: [.white,.green.opacity(0.4)]),
                     startPoint: .top,
