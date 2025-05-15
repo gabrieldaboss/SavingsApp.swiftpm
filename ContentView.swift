@@ -26,7 +26,7 @@ struct ContentView: View {
                             .foregroundColor(.primaryBackground)
                             .cornerRadius(12)
                             .padding(.bottom,-50)
-                        
+                    
                         
                         NavigationLink("Monthly Savings",destination: MonthlySavings1())
                         
