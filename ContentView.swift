@@ -10,7 +10,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-//Test
+
                 LinearGradient(
                     gradient: Gradient(colors: [.white,.green.opacity(0.4)]),
                     startPoint: .top,
@@ -18,12 +18,14 @@ struct ContentView: View {
                 )
                 .ignoresSafeArea()
                 VStack(spacing:20) {
+                    Spacer()
                     HStack{
                         NavigationLink("HowToSave",destination: HowToSave1())
                             .padding()
                             .background(Color.customGreen)
                             .foregroundColor(.primaryBackground)
                             .cornerRadius(12)
+                            .padding(.bottom,-50)
                         
                         
                         NavigationLink("Monthly Savings",destination: MonthlySavings1())
@@ -32,14 +34,18 @@ struct ContentView: View {
                             .background(Color.customGreen)
                             .foregroundColor(.primaryBackground)
                             .cornerRadius(12)
+                            .padding(.bottom,-50)
                         NavigationLink("Ideas",destination: Ideas1())
                         
                             .padding()
                             .background(Color.customGreen)
                             .foregroundColor(.primaryBackground)
                             .cornerRadius(12)
+                            .padding(.bottom,-50)
+                           
                     }
                     
+                
                     
                     
                     
@@ -49,6 +55,7 @@ struct ContentView: View {
                     Text("SaveBetter")
                         .frame(width: 200,height: 200)
                         .titleStyle()
+                        .padding(.bottom,30)
                     ZStack{
                         Circle()
                             .fill(Color.green.opacity(0.1))
