@@ -25,7 +25,7 @@ struct ContentView: View {
                             .background(Color.customGreen)
                             .foregroundColor(.primaryBackground)
                             .cornerRadius(12)
-                            .padding(.bottom,-50)
+                            .padding(.bottom,-7)
                     
                         
                         NavigationLink("Monthly Savings",destination: MonthlySavings1())
@@ -34,14 +34,14 @@ struct ContentView: View {
                             .background(Color.customGreen)
                             .foregroundColor(.primaryBackground)
                             .cornerRadius(12)
-                            .padding(.bottom,-50)
+                            .padding(.bottom,-7)
                         NavigationLink("Ideas",destination: Ideas1())
                         
                             .padding()
                             .background(Color.customGreen)
                             .foregroundColor(.primaryBackground)
                             .cornerRadius(12)
-                            .padding(.bottom,-50)
+                            .padding(.bottom,-7)
                            
                     }
                     
@@ -55,7 +55,7 @@ struct ContentView: View {
                     Text("SaveBetter")
                         .frame(width: 200,height: 200)
                         .titleStyle()
-                        .padding(.bottom,30)
+                        .padding(.bottom,-80)
                     ZStack{
                         Circle()
                             .fill(Color.green.opacity(0.1))
