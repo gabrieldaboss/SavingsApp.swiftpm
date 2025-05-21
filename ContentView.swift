@@ -65,12 +65,12 @@ struct ContentView: View {
                     .padding(.bottom, 20)
 
                     // TextFields
-                    TextField("How much money you have", text: $number1)
+                    TextField("Savings Goal", text: $number1)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.decimalPad)
                         .padding(.horizontal)
 
-                    TextField("How much you spent", text: $number3)
+                    TextField("Amount spent", text: $number3)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.decimalPad)
                         .padding(.horizontal)
