@@ -27,7 +27,7 @@ struct ContentView: View {
                             .cornerRadius(12)
                             .padding(.bottom,-7)
                         
-                            .padding(.bottom,-50)
+                            
                         
                         
                         NavigationLink("Monthly Savings",destination: MonthlySavings1())

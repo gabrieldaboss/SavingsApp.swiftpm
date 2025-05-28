@@ -11,9 +11,13 @@ struct HowToSave1: View {
             .ignoresSafeArea()
             
             VStack(spacing: 30) {
-                Text("💰 7 Smart Save Hacks 💰")
+                VStack{
+                    Text("💰 7 Smart Ways")
+                    Text(" To Save 💰")
+                }
+               
                     .font(.system(size: 40, weight: .bold))
-                    .padding(.top, -200)
+                    .padding(.top, -220)
                 
                 VStack(spacing: 20) {
                     HStack {
