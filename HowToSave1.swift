@@ -9,10 +9,15 @@ struct HowToSave1: View {
                       )
                       .ignoresSafeArea()
         VStack{
-            Text("Best Way To Save In 7 Steps")
-                .padding(.top,-270)
-                .font(.largeTitle)
-            VStack(alignment: .leading , spacing: nil, content:{
+            VStack{
+                Text("Best Way To Save In ")
+                Text("7 Steps")
+
+            }
+            .padding(.top,-270)
+            .font(.largeTitle)
+
+                            VStack(alignment: .leading , spacing: nil, content:{
                 Text("1. Track your spending. One of the greatest contributors to overspending is a credit card ")
                 Text("2. Establish a budget")
                 Text("3. Set up savings goals")
