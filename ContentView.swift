@@ -6,80 +6,150 @@ struct ContentView: View {
     @State var number4 = ""
     @State var totalSavings = ""
     @State var rotation = 0.0
-
+    
     var body: some View {
-        NavigationStack {
-            ZStack {
-                // Background Gradient
+        NavigationStack{
+            ZStack{
+                
                 LinearGradient(
-                    gradient: Gradient(colors: [.white, .green.opacity(0.4)]),
+                    gradient: Gradient(colors: [.white,.green.opacity(0.4)]),
                     startPoint: .top,
                     endPoint: .bottom
                 )
                 .ignoresSafeArea()
-
-                VStack(spacing: 20) {
-                    // Navigation Buttons
-                    HStack {
-                        NavigationLink("HowToSave", destination: HowToSave1())
-                            .padding()
-                            .background(Color.customGreen)
-                            .foregroundColor(.primaryBackground)
-                            .cornerRadius(12)
-
-                        NavigationLink("Monthly Savings", destination: MonthlySavings1())
-                            .padding()
-                            .background(Color.customGreen)
-                            .foregroundColor(.primaryBackground)
-                            .cornerRadius(12)
-
-                        NavigationLink("Ideas", destination: Ideas1())
-                            .padding()
-                            .background(Color.customGreen)
-                            .foregroundColor(.primaryBackground)
-                            .cornerRadius(12)
-                    }
-                    .padding(.top)
-
+                VStack(spacing:20) {
                     Spacer()
-
-                    // Title
+                    HStack{
+                        NavigationLink("HowToSave",destination: HowToSave1())
+                            .padding()
+                            .background(Color.customGreen)
+                            .foregroundColor(.primaryBackground)
+                            .cornerRadius(12)
+                            .padding(.bottom,-7)
+                        
+                            .padding(.bottom,-50)
+                        
+                        
+                        NavigationLink("Monthly Savings",destination: MonthlySavings1())
+                        
+                            .padding()
+                            .background(Color.customGreen)
+                            .foregroundColor(.primaryBackground)
+                            .cornerRadius(12)
+                            .padding(.bottom,-7)
+                        NavigationLink("Ideas",destination: Ideas1())
+                        
+                            .padding()
+                            .background(Color.customGreen)
+                            .foregroundColor(.primaryBackground)
+                            .cornerRadius(12)
+                            .padding(.bottom,-7)
+                        
+                    }
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
                     Text("SaveBetter")
-                        .frame(width: 200, height: 50)
+                        .frame(width: 200,height: 200)
                         .titleStyle()
-                        .padding(.bottom, 10)
-
-                    // Circle Savings Display
-                    ZStack {
+                        .padding(.bottom,-80)
+                    ZStack{
                         Circle()
                             .fill(Color.green.opacity(0.1))
-                            .frame(width: 150, height: 150)
+                            .frame(width: 150,height: 150)
                             .shadow(radius: 5)
                         Circle()
-                            .stroke(Color.green, lineWidth: 5)
-                            .frame(width: 150, height: 150)
-
+                            .stroke(Color.green,lineWidth: 5)
+                            .frame(width: 150,height: 150)
+                        
                         Text(totalSavings)
                             .font(.title)
+                            .padding(.top, 20)
+                        
+                        VStack {
+                            Spacer()
+                            Spacer()
+                            
+                            Text("SaveBetter")
+                                .frame(width: 200, height: 200)
+                                .titleStyle()
+                                .padding(.bottom, 30)
+                            
+                            ZStack {
+                                Circle()
+                                    .fill(Color.green.opacity(0.1))
+                                    .frame(width: 150, height: 150)
+                                    .shadow(radius: 5)
+                                Circle()
+                                    .stroke(Color.green, lineWidth: 5)
+                                    .frame(width: 150, height: 150)
+                                
+                                Text(totalSavings)
+                                    .font(.title)
+                                    .padding(.top, 20)
+                            }
+                            .padding(.vertical, 20)
+                        }
+                        
+                        
+                        
+                        
+                        
+                        TextField("How much money you have", text: $number1)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.decimalPad)
+                            .padding(.horizontal)
+                        
+                        TextField("How much you spent", text: $number3)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.decimalPad)
+                            .padding(.horizontal)
+                        
+                        TextField("How much you added", text: $number4)
+                            .textFieldStyle(RoundedBorderTextFieldStyle())
+                            .keyboardType(.decimalPad)
+                            .padding(.horizontal)
+                        
+                        Button("Add it up!") {
+                            calculateTotal()
+                        }
+                        .padding()
+                        .background(Color.customGreen)
+                        .foregroundColor(.primaryBackground)
+                        .cornerRadius(10)
+                        .padding(.top, 20)
+                        
+                        Text("Total Savings: \(totalSavings)")
+                            .font(.title)
+                            .padding(.top, 20)
+                        
+                        Spacer()
+                        
                     }
                     .padding(.bottom, 20)
-
+                    
                     // TextFields
                     TextField("Savings Goal", text: $number1)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.decimalPad)
                         .padding(.horizontal)
-
+                    
                     TextField("Amount spent", text: $number3)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.decimalPad)
                         .padding(.horizontal)
-
+                    
                     TextField("How much you added", text: $number4)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .keyboardType(.decimalPad)
                         .padding(.horizontal)
-
+                    
                     // Button
                     Button("Add it up!") {
                         calculateTotal()
@@ -88,28 +158,29 @@ struct ContentView: View {
                     .background(Color.customGreen)
                     .foregroundColor(.primaryBackground)
                     .cornerRadius(10)
-
+                    
                     // Result Text
                     Text("Total Savings: \(totalSavings)")
                         .font(.title)
                         .padding(.top, 10)
-
+                    
                     Spacer()
                 }
-                .padding()
             }
         }
-    }
+        
+        
 
-    // Calculate Savings Function
+    }
     func calculateTotal() {
         if let start = Double(number1),
            let spend = Double(number3),
            let add = Double(number4) {
             let total = start - spend + add
-            totalSavings = String(total)
+            totalSavings = String(format: "%.2f", total)
         } else {
             totalSavings = "Type numbers only!"
         }
     }
 }
+
