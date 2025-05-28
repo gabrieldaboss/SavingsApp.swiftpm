@@ -1,57 +1,67 @@
 import SwiftUI
+
 struct HowToSave1: View {
     var body: some View {
-        ZStack{
-                      LinearGradient(
-                          gradient: Gradient(colors: [.white,.green.opacity(0.4)]),
-                          startPoint: .top,
-                          endPoint: .bottom
-                      )
-                      .ignoresSafeArea()
-        VStack{
-            Text("Best Way To Save In 7 Steps")
-                .padding(.top,-270)
-                .font(.largeTitle)
-            VStack(alignment: .leading , spacing: nil, content:{
-                Text("1. Track your spending. One of the greatest contributors to overspending is a credit card ")
-                Text("2. Establish a budget")
-                Text("3. Set up savings goals")
-                Text("4. Use an automated tool")
-                Text("5. Prepare for grocery shopping in advance")
-                Text("6. Bring your lunch to work")
-                Text("7. Stop paying for cable television")
-                
-                
-                
-                
-                
-            })
-            .padding(.top, -200)
-            .font(.title2)
+        ZStack {
+            LinearGradient(
+                gradient: Gradient(colors: [.white, .green.opacity(0.3)]),
+                startPoint: .top,
+                endPoint: .bottom
+            )
+            .ignoresSafeArea()
             
-            
-            
-            Text("Be Smart Save Better ")
-                .padding(.top, 100)
-                .font(.largeTitle)
-            
-          
-                
-                
-                
-               
-                    
-                    
+            VStack(spacing: 30) {
+                VStack{
+                    Text("💰 7 Smart Ways")
+                    Text(" To Save 💰")
                 }
+               
+                    .font(.system(size: 40, weight: .bold))
+                    .padding(.top, -220)
+                
+                VStack(spacing: 20) {
+                    HStack {
+                        Image(systemName: "creditcard.fill")
+                        Text("Track Spending")
+                    }
+                    HStack {
+                        Image(systemName: "chart.bar.fill")
+                        Text("Set a Budget")
+                    }
+                    HStack {
+                        Image(systemName: "target")
+                        Text("Goal It!")
+                    }
+                    HStack {
+                        Image(systemName: "gearshape.fill")
+                        Text("Auto-Save")
+                    }
+                    HStack {
+                        Image(systemName: "cart.fill")
+                        Text("Plan Groceries")
+                    }
+                    HStack {
+                        Image(systemName: "bag.fill")
+                        Text("Pack Lunch")
+                    }
+                    HStack {
+                        Image(systemName: "tv.slash.fill")
+                        Text("Cut Cable")
+                    }
+                }
+                .font(.title2)
+                .padding(.top, -150)
+                
+                Text("✨ Be Smart. Save Better! ✨")
+                    .font(.title)
+                    .padding(.top, 50)
             }
-            .fontWeight(.bold)
             .foregroundStyle(.green)
         }
     }
-    
-    #Preview{
-        HowToSave1()
-        
-    }
-    
+}
+
+#Preview {
+    HowToSave1()
+}
 

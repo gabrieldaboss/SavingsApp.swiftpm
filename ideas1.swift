@@ -15,7 +15,7 @@ struct Ideas1: View {
 
             VStack {
                 Text("Share your ideas")
-                    .font(.title)
+                    .font(.custom("Baskerville-semiBold", size: 25))
                     .padding()
 
                 TextField("Type here...", text: $ideaText)
