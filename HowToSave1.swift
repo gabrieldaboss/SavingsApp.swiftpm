@@ -27,7 +27,8 @@ struct HowToSave1: View {
                 
             })
             .padding(.top, -200)
-            .font(.title2)
+            
+           .font(.custom("Baskerville-semiBold", size: 25))
             
             
             

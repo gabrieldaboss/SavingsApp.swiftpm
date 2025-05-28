@@ -56,6 +56,8 @@ struct ContentView: View {
                         .frame(width: 200,height: 200)
                         .titleStyle()
                         .padding(.bottom,30)
+                        .font(.custom("Baskerville-semiBold", size: 25))
+                    
                     ZStack{
                         Circle()
                             .fill(Color.green.opacity(0.1))
@@ -66,7 +68,7 @@ struct ContentView: View {
                             .frame(width: 150,height: 150)
                         
                         Text(totalSavings)
-                            .font(.title)
+                            .font(.custom("Baskerville-semiBold", size: 25))
                             .padding(.top, 20)
                     }
                     .padding(.vertical,20)

@@ -25,7 +25,7 @@ struct MonthlySavings1: View {
             
             VStack(spacing: 20) {
                 Text("Monthly Savings Calculator")
-                    .font(.title)
+                    .font(.custom("Baskerville-semiBold", size: 25))
                     .fontWeight(.bold)
                 
                 TextField("Enter Monthly Total", text: $monthlyTotal)
