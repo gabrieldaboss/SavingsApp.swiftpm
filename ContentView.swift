@@ -58,79 +58,21 @@ struct ContentView: View {
                     Text("SaveBetter")
                         .frame(width: 200,height: 200)
                         .titleStyle()
-                        .padding(.bottom,-80)
+                        .padding(.bottom,30)
+                        .font(.custom("Baskerville-semiBold", size: 25))
+                    
                     ZStack{
                         Circle()
                             .fill(Color.green.opacity(0.1))
-                            .frame(width: 150,height: 150)
+                            .frame(width: 150, height: 150)
                             .shadow(radius: 5)
                         Circle()
-                            .stroke(Color.green,lineWidth: 5)
-                            .frame(width: 150,height: 150)
-                        
+                            .stroke(Color.green, lineWidth: 5)
+                            .frame(width: 150, height: 150)
+
                         Text(totalSavings)
-                            .font(.title)
+                            .font(.custom("Baskerville-semiBold", size: 25))
                             .padding(.top, 20)
-                        
-                        VStack {
-                            Spacer()
-                            Spacer()
-                            
-                            Text("SaveBetter")
-                                .frame(width: 200, height: 200)
-                                .titleStyle()
-                                .padding(.bottom, 30)
-                            
-                            ZStack {
-                                Circle()
-                                    .fill(Color.green.opacity(0.1))
-                                    .frame(width: 150, height: 150)
-                                    .shadow(radius: 5)
-                                Circle()
-                                    .stroke(Color.green, lineWidth: 5)
-                                    .frame(width: 150, height: 150)
-                                
-                                Text(totalSavings)
-                                    .font(.title)
-                                    .padding(.top, 20)
-                            }
-                            .padding(.vertical, 20)
-                        }
-                        
-                        
-                        
-                        
-                        
-                        TextField("How much money you have", text: $number1)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.decimalPad)
-                            .padding(.horizontal)
-                        
-                        TextField("How much you spent", text: $number3)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.decimalPad)
-                            .padding(.horizontal)
-                        
-                        TextField("How much you added", text: $number4)
-                            .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .keyboardType(.decimalPad)
-                            .padding(.horizontal)
-                        
-                        Button("Add it up!") {
-                            calculateTotal()
-                        }
-                        .padding()
-                        .background(Color.customGreen)
-                        .foregroundColor(.primaryBackground)
-                        .cornerRadius(10)
-                        .padding(.top, 20)
-                        
-                        Text("Total Savings: \(totalSavings)")
-                            .font(.title)
-                            .padding(.top, 20)
-                        
-                        Spacer()
-                        
                     }
                     .padding(.bottom, 20)
                     
